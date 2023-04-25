@@ -1785,10 +1785,10 @@ namespace Anycubic {
             return ;
         }
 
-        steps = mmToWholeSteps(-0.05, Z);
+        steps = mmToWholeSteps(-BABYSTEP_MULTIPLICATOR_Z, Z);
         babystepAxis_steps(steps, Z);
 
-        z_off -= 0.05f;
+        z_off -= BABYSTEP_MULTIPLICATOR_Z;
         setZOffset_mm(z_off);
 
         sprintf(str_buf, "%.2f", getZOffset_mm());
@@ -1806,10 +1806,10 @@ namespace Anycubic {
             return ;
         }
 
-        steps = mmToWholeSteps(0.05, Z);
+        steps = mmToWholeSteps(BABYSTEP_MULTIPLICATOR_Z, Z);
         babystepAxis_steps(steps, Z);
 
-        z_off += 0.05f;
+        z_off += BABYSTEP_MULTIPLICATOR_Z;
         setZOffset_mm(z_off);
 
         sprintf(str_buf, "%.2f", getZOffset_mm());
@@ -2451,10 +2451,10 @@ namespace Anycubic {
                     return ;
                 }
 
-                steps = mmToWholeSteps(-0.05, Z);
+                steps = mmToWholeSteps(-BABYSTEP_MULTIPLICATOR_Z, Z);
                 babystepAxis_steps(steps, Z);
 
-                z_off -= 0.05f;
+                z_off -= BABYSTEP_MULTIPLICATOR_Z;
                 setZOffset_mm(z_off);
 
                 sprintf(str_buf, "%.2f", getZOffset_mm());
@@ -2472,10 +2472,10 @@ namespace Anycubic {
                     return ;
                 }
 
-                steps = mmToWholeSteps(0.05, Z);
+                steps = mmToWholeSteps(BABYSTEP_MULTIPLICATOR_Z, Z);
                 babystepAxis_steps(steps, Z);
 
-                z_off += 0.05f;
+                z_off += BABYSTEP_MULTIPLICATOR_Z;
                 setZOffset_mm(z_off);
 
                 sprintf(str_buf, "%.2f", getZOffset_mm());
@@ -3612,10 +3612,10 @@ namespace Anycubic {
             return ;
         }
 
-        steps = mmToWholeSteps(-0.05, Z);
+        steps = mmToWholeSteps(-BABYSTEP_MULTIPLICATOR_Z, Z);
         babystepAxis_steps(steps, Z);
 
-        z_off -= 0.05f;
+        z_off -= BABYSTEP_MULTIPLICATOR_Z;
         setZOffset_mm(z_off);
 
         sprintf(str_buf, "%.2f", getZOffset_mm());
@@ -3633,10 +3633,10 @@ namespace Anycubic {
             return ;
         }
 
-        steps = mmToWholeSteps(0.05, Z);
+        steps = mmToWholeSteps(BABYSTEP_MULTIPLICATOR_Z, Z);
         babystepAxis_steps(steps, Z);
 
-        z_off += 0.05f;
+        z_off += BABYSTEP_MULTIPLICATOR_Z;
         setZOffset_mm(z_off);
 
         sprintf(str_buf, "%.2f", getZOffset_mm());
