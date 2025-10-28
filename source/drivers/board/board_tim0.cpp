@@ -44,7 +44,7 @@ void timer_enable_irq(const uint8_t timer_num,en_functional_state_t state)
 
 bool timer_irq_enabled(M4_TMR0_TypeDef* pstcTim0Reg, const uint8_t timer_num)
 {
-    bool state;
+    bool state = false;
     switch (timer_num) {
         case STEP_TIMER_NUM:
             state = timer42_irq_get();
@@ -60,15 +60,19 @@ bool timer_irq_enabled(M4_TMR0_TypeDef* pstcTim0Reg, const uint8_t timer_num)
 
 en_result_t timer_set_compare(const uint8_t timer_num,const uint16_t compare)
 {
+    en_result_t status = ErrorInvalidParameter;
     switch (timer_num) {
         case STEP_TIMER_NUM:
             timer42_set_compare(compare);
+            status = Ok;
             break;
 
         case TEMP_TIMER_NUM:
 
             break;
     }
+
+    return status;
 }
 
 uint16_t timer_get_count(const uint8_t timer_num)
@@ -98,7 +102,7 @@ void delayMicroseconds(uint32_t us)
 {
     for(uint32_t i=0; i<us; i++) {
         for(uint32_t j=0; j<8; j++) {
-            __nop();
+            __NOP();
         }
     }
 }

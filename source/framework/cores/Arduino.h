@@ -29,17 +29,8 @@
 
 #include "wirish.h"
 
-#ifdef __cplusplus
-extern "C"{
-#endif // __cplusplus
-
-
-int32_t random(int32_t min, int32_t max);
-
-
-#ifdef __cplusplus
-}
-#endif // __cplusplus
-
+#ifndef __cplusplus
+long random(long min, long max);
 #endif
 
+#endif

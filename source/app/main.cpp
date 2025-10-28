@@ -9,7 +9,7 @@
 
 #include "diskio.h"
 
-#include "marlincore.h"
+#include "MarlinCore.h"
 
 
 #define APP_START_ADDRESS   0x8000u
@@ -36,7 +36,7 @@ void scb_init(void)
     SCB->VTOR = ((uint32_t) APP_START_ADDRESS & SCB_VTOR_TBLOFF_Msk);
 }
 
-int32_t main(void)
+int main(void)
 {
     scb_init();
 

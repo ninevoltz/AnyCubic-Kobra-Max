@@ -228,7 +228,7 @@ typedef enum IRQn
 
 }IRQn_Type;
 
-#include <core_cm4.h>
+#include "core_cm4.h"
 #include <stdint.h>
 
 /**
@@ -30632,4 +30632,3 @@ typedef struct
 #endif
 
 #endif /* __HC32F46X_H__ */
-

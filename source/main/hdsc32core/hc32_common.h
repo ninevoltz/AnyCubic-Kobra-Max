@@ -165,6 +165,9 @@ typedef enum en_result
 #elif defined (__CC_ARM)                ///< ARM Compiler
 #define __WEAKDEF                       __weak
 #define __ALIGN_BEGIN                   __align(4)
+#elif defined (__GNUC__)                ///< GNU Compiler
+#define __WEAKDEF                       __attribute__((weak))
+#define __ALIGN_BEGIN                   __attribute__((aligned(4)))
 #else
 #error  "unsupported compiler!!"
 #endif

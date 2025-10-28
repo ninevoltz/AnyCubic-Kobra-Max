@@ -1,4 +1,4 @@
-#include "tone.h"
+#include "Tone.h"
 #include "timers.h"
 #include "bsp_timer.h"
 #include "bsp_pwm.h"
@@ -42,4 +42,3 @@ HAL_TONE_TIMER_ISR()
         timer01B_disable();
     }
 }
-
